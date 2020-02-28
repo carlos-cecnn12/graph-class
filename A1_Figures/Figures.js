@@ -211,13 +211,20 @@ function createRhombus(gl)
     rhombusVertexBuffer = gl.createBuffer()
     gl.bindBuffer(gl.ARRAY_BUFFER, rhombusVertexBuffer)
     let verts=[
-        0,  0,  0.0,
-        -.5, -.5,  0.0,
-        .5,  -.5,  0.0,
-        0,-1,0
+        .5,0,0,
+        .15,.48,0,
+        .15,-.48,0,
+
+        .15,.48,0,
+        .15,-.48,0,
+        -0.4, -0.29, 0,
+
+        .15,.48,0,
+        -0.4, 0.29, 0,
+        -0.4,- 0.29, 0,
     ]
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(verts), gl.STATIC_DRAW);
-    var rhombus = {buffer:rhombusVertexBuffer, vertSize:3, nVerts:4, primtype:gl.TRIANGLE_STRIP};
+    var rhombus = {buffer:rhombusVertexBuffer, vertSize:3, nVerts:9, primtype:gl.TRIANGLES};
     return rhombus;
 }
 
