@@ -617,7 +617,7 @@ function createOctahedron(gl, translation,rotationAxis){
         if(flagO){
             mat4.translate(this.modelViewMatrix, this.modelViewMatrix, [0,.02,0]);
             counter1++
-            if(counter1%100==0){
+            if(counter1==100){
                 flagO=false
                 
             }
@@ -625,8 +625,8 @@ function createOctahedron(gl, translation,rotationAxis){
             
         }else{
             mat4.translate(this.modelViewMatrix, this.modelViewMatrix, [0,-.02,0]);
-            counter1++
-            if(counter1%100==0){
+            counter1--
+            if(counter1==-140){
                 flagO=true
             }
             
