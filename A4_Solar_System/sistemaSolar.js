@@ -63,19 +63,19 @@ var plutoData = setData(
 var clock = new THREE.Clock();
 
 function setData(
-  myOrbitRate,
-  myRotationRate,
-  myDistanceFromAxis,
-  mySize,
+  orbitRate,
+  rotationRate,
+  distanceFromAxis,
+  size,
   map,
   bumpMap,
   specularMap
 ) {
   return {
-    orbitRate: myOrbitRate,
-    rotationRate: myRotationRate,
-    distanceFromAxis: myDistanceFromAxis,
-    size: mySize,
+    orbitRate: orbitRate,
+    rotationRate: rotationRate,
+    distanceFromAxis: distanceFromAxis,
+    size: size,
     map: map,
     bump_map: bumpMap,
     specular_map: specularMap
