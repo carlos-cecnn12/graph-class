@@ -251,7 +251,7 @@ function update(renderer, scene, camera, controls) {
   movePlanet(uranus, uranusData, time);
   moveRing(uranusRing, uranusData, time);
   movePlanet(neptune, neptuneData, time);
-  movePlanet(pluto,plutoData,time)
+  movePlanet(pluto, plutoData, time);
   moveMoon(moonMars1, mars, moonData, time);
   moveMoon(moonMars2, mars, moonData, time);
   moveMoon(moonJupiter1, jupiter, moonData, time);
@@ -299,7 +299,6 @@ function update(renderer, scene, camera, controls) {
   moveMoon(moonPluto3, pluto, moonData, time);
   moveMoon(moonPluto4, pluto, moonData, time);
   moveMoon(moonPluto5, pluto, moonData, time);
-  
 
   renderer.render(scene, camera);
   requestAnimationFrame(function() {
@@ -452,46 +451,226 @@ function init() {
   moonNeptune10 = createMoon(moonData, moonData.distanceFromAxis, -2.5, 0, 0.1);
   pluto = createPlanet(plutoData, plutoData.distanceFromAxis, 0, 0);
   moonPluto1 = createMoon(moonData, moonData.distanceFromAxis, 0, 0, 0.1);
-  moonPluto2 = createMoon(moonData, moonData.distanceFromAxis, .5, 0, 0.1);
-  moonPluto3 = createMoon(moonData, moonData.distanceFromAxis, -.5, 0, 0.1);
+  moonPluto2 = createMoon(moonData, moonData.distanceFromAxis, 0.5, 0, 0.1);
+  moonPluto3 = createMoon(moonData, moonData.distanceFromAxis, -0.5, 0, 0.1);
   moonPluto4 = createMoon(moonData, moonData.distanceFromAxis, -1, 0, 0.1);
   moonPluto5 = createMoon(moonData, moonData.distanceFromAxis, 1.0, 0, 0.1);
-  meteor1 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(10),0,meteorData.distanceFromAxis * Math.cos(10));
-meteor2 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(20),0,meteorData.distanceFromAxis * Math.cos(20));
-meteor3 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(30),0,meteorData.distanceFromAxis * Math.cos(30));
-meteor4 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(40),0,meteorData.distanceFromAxis * Math.cos(40));
-meteor5 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(50),0,meteorData.distanceFromAxis * Math.cos(50));
-meteor6 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(60),0,meteorData.distanceFromAxis * Math.cos(60));
-meteor7 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(70),0,meteorData.distanceFromAxis * Math.cos(70));
-meteor8 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(80),0,meteorData.distanceFromAxis * Math.cos(80));
-meteor9 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(90),0,meteorData.distanceFromAxis * Math.cos(90));
-meteor10 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(100),0,meteorData.distanceFromAxis * Math.cos(100));
-meteor11 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(110),0,meteorData.distanceFromAxis * Math.cos(110));
-meteor12 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(120),0,meteorData.distanceFromAxis * Math.cos(120));
-meteor13 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(130),0,meteorData.distanceFromAxis * Math.cos(130));
-meteor14 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(140),0,meteorData.distanceFromAxis * Math.cos(140));
-meteor15 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(150),0,meteorData.distanceFromAxis * Math.cos(150));
-meteor16 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(160),0,meteorData.distanceFromAxis * Math.cos(160));
-meteor17 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(170),0,meteorData.distanceFromAxis * Math.cos(170));
-meteor18 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(180),0,meteorData.distanceFromAxis * Math.cos(180));
-meteor19 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(190),0,meteorData.distanceFromAxis * Math.cos(190));
-meteor20 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(200),0,meteorData.distanceFromAxis * Math.cos(200));
-meteor21 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(210),0,meteorData.distanceFromAxis * Math.cos(210));
-meteor22 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(220),0,meteorData.distanceFromAxis * Math.cos(220));
-meteor23 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(230),0,meteorData.distanceFromAxis * Math.cos(230));
-meteor24 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(240),0,meteorData.distanceFromAxis * Math.cos(240));
-meteor25 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(250),0,meteorData.distanceFromAxis * Math.cos(250));
-meteor26 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(260),0,meteorData.distanceFromAxis * Math.cos(260));
-meteor27 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(270),0,meteorData.distanceFromAxis * Math.cos(270));
-meteor28 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(280),0,meteorData.distanceFromAxis * Math.cos(280));
-meteor29 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(290),0,meteorData.distanceFromAxis * Math.cos(290));
-meteor30 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(300),0,meteorData.distanceFromAxis * Math.cos(300));
-meteor31 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(310),0,meteorData.distanceFromAxis * Math.cos(310));
-meteor32 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(320),0,meteorData.distanceFromAxis * Math.cos(320));
-meteor33 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(330),0,meteorData.distanceFromAxis * Math.cos(330));
-meteor34 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(340),0,meteorData.distanceFromAxis * Math.cos(340));
-meteor35 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(350),0,meteorData.distanceFromAxis * Math.cos(350));
-meteor36 = createPlanet(meteorData,meteorData.distanceFromAxis * Math.sin(360),0,meteorData.distanceFromAxis * Math.cos(360));
+  meteor1 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(10),
+    0,
+    meteorData.distanceFromAxis * Math.cos(10)
+  );
+  meteor2 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(20),
+    0,
+    meteorData.distanceFromAxis * Math.cos(20)
+  );
+  meteor3 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(30),
+    0,
+    meteorData.distanceFromAxis * Math.cos(30)
+  );
+  meteor4 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(40),
+    0,
+    meteorData.distanceFromAxis * Math.cos(40)
+  );
+  meteor5 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(50),
+    0,
+    meteorData.distanceFromAxis * Math.cos(50)
+  );
+  meteor6 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(60),
+    0,
+    meteorData.distanceFromAxis * Math.cos(60)
+  );
+  meteor7 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(70),
+    0,
+    meteorData.distanceFromAxis * Math.cos(70)
+  );
+  meteor8 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(80),
+    0,
+    meteorData.distanceFromAxis * Math.cos(80)
+  );
+  meteor9 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(90),
+    0,
+    meteorData.distanceFromAxis * Math.cos(90)
+  );
+  meteor10 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(100),
+    0,
+    meteorData.distanceFromAxis * Math.cos(100)
+  );
+  meteor11 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(110),
+    0,
+    meteorData.distanceFromAxis * Math.cos(110)
+  );
+  meteor12 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(120),
+    0,
+    meteorData.distanceFromAxis * Math.cos(120)
+  );
+  meteor13 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(130),
+    0,
+    meteorData.distanceFromAxis * Math.cos(130)
+  );
+  meteor14 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(140),
+    0,
+    meteorData.distanceFromAxis * Math.cos(140)
+  );
+  meteor15 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(150),
+    0,
+    meteorData.distanceFromAxis * Math.cos(150)
+  );
+  meteor16 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(160),
+    0,
+    meteorData.distanceFromAxis * Math.cos(160)
+  );
+  meteor17 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(170),
+    0,
+    meteorData.distanceFromAxis * Math.cos(170)
+  );
+  meteor18 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(180),
+    0,
+    meteorData.distanceFromAxis * Math.cos(180)
+  );
+  meteor19 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(190),
+    0,
+    meteorData.distanceFromAxis * Math.cos(190)
+  );
+  meteor20 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(200),
+    0,
+    meteorData.distanceFromAxis * Math.cos(200)
+  );
+  meteor21 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(210),
+    0,
+    meteorData.distanceFromAxis * Math.cos(210)
+  );
+  meteor22 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(220),
+    0,
+    meteorData.distanceFromAxis * Math.cos(220)
+  );
+  meteor23 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(230),
+    0,
+    meteorData.distanceFromAxis * Math.cos(230)
+  );
+  meteor24 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(240),
+    0,
+    meteorData.distanceFromAxis * Math.cos(240)
+  );
+  meteor25 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(250),
+    0,
+    meteorData.distanceFromAxis * Math.cos(250)
+  );
+  meteor26 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(260),
+    0,
+    meteorData.distanceFromAxis * Math.cos(260)
+  );
+  meteor27 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(270),
+    0,
+    meteorData.distanceFromAxis * Math.cos(270)
+  );
+  meteor28 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(280),
+    0,
+    meteorData.distanceFromAxis * Math.cos(280)
+  );
+  meteor29 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(290),
+    0,
+    meteorData.distanceFromAxis * Math.cos(290)
+  );
+  meteor30 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(300),
+    0,
+    meteorData.distanceFromAxis * Math.cos(300)
+  );
+  meteor31 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(310),
+    0,
+    meteorData.distanceFromAxis * Math.cos(310)
+  );
+  meteor32 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(320),
+    0,
+    meteorData.distanceFromAxis * Math.cos(320)
+  );
+  meteor33 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(330),
+    0,
+    meteorData.distanceFromAxis * Math.cos(330)
+  );
+  meteor34 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(340),
+    0,
+    meteorData.distanceFromAxis * Math.cos(340)
+  );
+  meteor35 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(350),
+    0,
+    meteorData.distanceFromAxis * Math.cos(350)
+  );
+  meteor36 = createPlanet(
+    meteorData,
+    meteorData.distanceFromAxis * Math.sin(360),
+    0,
+    meteorData.distanceFromAxis * Math.cos(360)
+  );
 
   // Create the visible orbit that the Earth uses.
   createOrbits();
