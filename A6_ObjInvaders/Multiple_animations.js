@@ -212,13 +212,9 @@ let mapUrl = "../images/checker_large.gif";
 let SHADOW_MAP_WIDTH = 2048,
   SHADOW_MAP_HEIGHT = 2048;
 
-async function getEnemies(){
-  while(enemies.length<8)
-  {
-    await loadGLTF()
-  }
+function start(){
+  
 }
-
 async function createScene(canvas) {
   // Create the Three.js renderer and attach it to our canvas
   renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
