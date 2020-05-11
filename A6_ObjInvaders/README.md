@@ -22,3 +22,13 @@ Based on the Class demos, create a 3D [zerg rush](https://elgoog.im/zergrush/) s
 - UI feedback messages (to start or restart the game) were correctly displayed.
 
 **Deadline:** 08/05/2020
+
+**Grade:** 75
+
+**Notes:** 
+
+- El timer no funciona.
+- Los robots solo salen de un lugar.
+- El pointer lock no está funcionando correctamente. Solo me aparece un canvas pequeño a la izquierda de la pantalla.
+- No pierdo puntos si el robot choca con la cámara.
+- Faltó implementar el restart.

@@ -24,3 +24,5 @@ The penguin has to move in an *8* pattern while walking.
 2. Add additional objects with their own animations.
 
 **Deadline:** 24/04/2020
+
+**Grade:** 100
